@@ -1,7 +1,7 @@
 # Dzmitry Upiravets
 
 ## Contact info
-    location: Belarus, Brest
+    location: Belarus, Brest / Poland, Zielona Góra
     phone: +375292005652
     telegram: @hvatit_admin
     mail: dimonnn.26@gmail.com
