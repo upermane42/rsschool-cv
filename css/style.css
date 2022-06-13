@@ -1,6 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -12,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #e6e5e8;
 }
 
@@ -26,10 +27,10 @@ a {
 
 :root {
   --color-white: #ffffff;
-  --accent-color: #FB8F1D;
+  --accent-color: #fb8f1d;
   --accent-color-hover: #d67a16;
-  --color-dark: #19191B;
-  --color-heather: #B8BECD;
+  --color-dark: #19191b;
+  --color-heather: #b8becd;
 }
 
 .list-reset {
@@ -98,7 +99,7 @@ a {
 }
 
 .header__item a::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 1px;
@@ -115,6 +116,10 @@ a {
   padding: 30px 0;
   background-color: #d8cec8;
   margin-bottom: 40px;
+  background-image: url(/img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__container {
@@ -127,25 +132,39 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .hero__title {
   font-size: 64px;
   margin: 0;
   font-weight: 800;
+  background-color: white;
+  padding: 4px;
 }
 
 .hero__desc {
   font-size: 14px;
   margin: 0;
   font-weight: 600;
+  display: inline-block;
+  padding: 4px;
+  background-color: white;
 }
 
 .hero__images {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   border-radius: 100%;
   overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: -130px;
+  border: 6px solid white;
+  -webkit-box-shadow: 1px 5px 10px 0px #8f8f8f85;
+          box-shadow: 1px 5px 10px 0px #8f8f8f85;
 }
 
 .contact {
@@ -154,6 +173,10 @@ a {
 
 .contact__caption {
   font-weight: 600;
+}
+
+.contact__item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .contact__link {
@@ -170,6 +193,7 @@ a {
   padding: 4px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: inline-block;
 }
 
 .about__desc--link:hover {
@@ -180,8 +204,18 @@ a {
   margin-bottom: 40px;
 }
 
+.skills__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
 .code {
   margin-bottom: 40px;
+}
+
+.code__pre {
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 40px 0px #c4c4c425;
+          box-shadow: 1px 1px 40px 0px #c4c4c425;
 }
 
 .education {
@@ -237,8 +271,29 @@ a {
     font-size: 48px;
   }
   .hero__images {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+    right: 15px;
+    bottom: -90px;
+  }
+}
+
+@media (max-width: 535px) {
+  .code__js {
+    font-size: 14px;
+  }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__year,
+  .footer__github {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

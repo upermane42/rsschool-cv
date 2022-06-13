@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -10,7 +11,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #e6e5e8;
 }
 
@@ -24,10 +25,10 @@ a {
 
 :root {
     --color-white: #ffffff;
-    --accent-color: #FB8F1D;
+    --accent-color: #fb8f1d;
     --accent-color-hover: #d67a16;
-    --color-dark: #19191B;
-    --color-heather: #B8BECD;
+    --color-dark: #19191b;
+    --color-heather: #b8becd;
 }
 
 .list-reset {
@@ -84,7 +85,7 @@ a {
         width: 100%;
     }
     &__item a::after {
-        content: '';
+        content: "";
         display: block;
         width: 0;
         height: 1px;
@@ -101,29 +102,45 @@ a {
     padding: 30px 0;
     background-color: #d8cec8;
     margin-bottom: 40px;
+    background-image: url(/img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     &__wrapper {
-
     }
     &__title {
         font-size: 64px;
         margin: 0;
         font-weight: 800;
+        background-color: white;
+        padding: 4px;
     }
     &__desc {
         font-size: 14px;
         margin: 0;
         font-weight: 600;
+        display: inline-block;
+        padding: 4px;
+        background-color: white;
     }
     &__images {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 240px;
         border-radius: 100%;
         overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+        border: 6px solid white;
+        box-shadow: 1px 5px 10px 0px #8f8f8f85;
     }
 }
 
@@ -131,6 +148,9 @@ a {
     margin-bottom: 40px;
     &__caption {
         font-weight: 600;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
     }
     &__link {
         color: var(--color-dark);
@@ -143,6 +163,7 @@ a {
         color: var(--color-white);
         padding: 4px;
         transition: all 0.3s ease-in-out;
+        display: inline-block;
     }
     &__desc--link:hover {
         background-color: black;
@@ -150,9 +171,16 @@ a {
 }
 .skills {
     margin-bottom: 40px;
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
 }
 .code {
     margin-bottom: 40px;
+    &__pre {
+        background-color: white;
+        box-shadow: 1px 1px 40px 0px #c4c4c425;
+    }
 }
 .education {
     margin-bottom: 40px;
@@ -166,7 +194,7 @@ a {
         align-items: center;
         justify-content: space-between;
     }
-    &__rsschool img{
+    &__rsschool img {
         width: 100px;
     }
     &__github-link {
@@ -174,7 +202,7 @@ a {
         align-items: center;
         color: white;
     }
-    &__github-link  svg{
+    &__github-link svg {
         width: 20px;
         margin-right: 10px;
         fill: var(--color-white);
@@ -190,12 +218,27 @@ a {
     .hero__title {
         font-size: 48px;
     }
+    // .hero__wrapper {
+    //     max-width: 40%;
+    // }
     .hero__images {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
+        right: 15px;
+        bottom: -90px;
     }
 }
 
 @media (max-width: 535px) {
-
+    .code__js {
+        font-size: 14px;
+    }
+    .footer__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__year,
+    .footer__github {
+        margin-bottom: 20px;
+    }
 }
